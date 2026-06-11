@@ -19,63 +19,67 @@
             height: 6px;
         }
         .scrollbar-thin::-webkit-scrollbar-track {
-            background: #f1f5f9;
+            background: #2f353f;
         }
         .scrollbar-thin::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: #838c9c;
             border-radius: 3px;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+<body class="bg-gray-900 text-gray-200 min-h-screen flex flex-col">
 
-    <header class="bg-indigo-950 text-white shadow-md sticky top-0 z-50">
+    <!-- TOPO ROXO -->
+    <header class="bg-purple-950 text-white shadow-lg sticky top-0 z-50 border-b border-purple-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
-                <div class="bg-indigo-600 p-2 rounded-lg flex items-center justify-center">
+                <div class="bg-purple-600 p-2 rounded-lg flex items-center justify-center">
                     <i data-lucide="truck" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold tracking-tight">LogiTrack</h1>
-                    <p class="text-xs text-indigo-200">Painel Inteligente de Monitoramento Logístico</p>
+                    <h1 class="text-xl font-bold tracking-tight">Rota Brasil</h1>
+                    <p class="text-xs text-purple-300">Monitoramento Logístico On-line</p>
                 </div>
             </div>
-            <div class="flex items-center gap-3 bg-indigo-900/50 px-4 py-2 rounded-lg border border-indigo-800 text-xs sm:text-sm">
+            <div class="flex items-center gap-3 bg-purple-900/50 px-4 py-2 rounded-lg border border-purple-700 text-xs sm:text-sm">
                 <span class="flex h-2.5 w-2.5 relative">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
-                <span class="text-indigo-100 font-medium">Dados atualizados em tempo real</span>
+                <span class="text-purple-200 font-medium">Dados atualizados em tempo real</span>
             </div>
         </div>
     </header>
 
+    <!-- CORPO CINZA ESCURO -->
     <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 space-y-6">
         
-        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <!-- Alerta -->
+        <div class="bg-amber-900/30 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 backdrop-blur-sm">
             <div class="flex items-start gap-3">
-                <div class="p-1 text-amber-700">
+                <div class="p-1 text-amber-400">
                     <i data-lucide="alert-triangle" class="w-5 h-5 mt-0.5"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-amber-900 text-sm md:text-base">Atenção Gerencial Necessária!</h4>
-                    <p class="text-xs md:text-sm text-amber-800">Identificamos que <strong>60% das entregas</strong> registradas encontram-se em estado de atraso (quando os dias reais superam o prazo contratado). Use os filtros abaixo para encontrar as transportadoras e regiões críticas.</p>
+                    <h4 class="font-semibold text-amber-300 text-sm md:text-base">Atenção Gerencial Necessária!</h4>
+                    <p class="text-xs md:text-sm text-amber-200/80">Identificamos que <strong>60% das entregas</strong> registradas encontram-se em estado de atraso (quando os dias reais superam o prazo contratado). Use os filtros abaixo para encontrar as transportadoras e regiões críticas.</p>
                 </div>
             </div>
-            <div class="text-xs bg-amber-100 text-amber-800 font-semibold px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">
+            <div class="text-xs bg-amber-800/50 text-amber-300 font-semibold px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto border border-amber-700/50">
                 Meta de tolerância máxima: 10%
             </div>
         </div>
 
-        <section class="bg-white rounded-xl border border-slate-200 p-4 sm:p-6 shadow-sm">
+        <!-- Filtros -->
+        <section class="bg-gray-800 rounded-xl border border-gray-700 p-4 sm:p-6 shadow-sm">
             <div class="flex items-center gap-2 mb-4">
-                <i data-lucide="sliders-horizontal" class="w-5 h-5 text-indigo-600"></i>
-                <h3 class="font-semibold text-slate-900 text-base">Filtros Dinâmicos</h3>
+                <i data-lucide="sliders-horizontal" class="w-5 h-5 text-purple-400"></i>
+                <h3 class="font-semibold text-gray-100 text-base">Filtros Dinâmicos</h3>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div>
-                    <label for="filter-region" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Filtrar por Região</label>
-                    <select id="filter-region" class="w-full bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                    <label for="filter-region" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Filtrar por Região</label>
+                    <select id="filter-region" class="w-full bg-gray-700 border border-gray-600 text-gray-200 text-sm rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
                         <option value="all">Todas as Regiões</option>
                         <option value="Sudeste">Sudeste</option>
                         <option value="Sul">Sul</option>
@@ -85,8 +89,8 @@
                     </select>
                 </div>
                 <div>
-                    <label for="filter-carrier" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Filtrar por Transportadora</label>
-                    <select id="filter-carrier" class="w-full bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                    <label for="filter-carrier" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Filtrar por Transportadora</label>
+                    <select id="filter-carrier" class="w-full bg-gray-700 border border-gray-600 text-gray-200 text-sm rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
                         <option value="all">Todas as Transportadoras</option>
                         <option value="RotaMax">RotaMax</option>
                         <option value="ViaCargo">ViaCargo</option>
@@ -94,15 +98,15 @@
                     </select>
                 </div>
                 <div>
-                    <label for="filter-status" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Filtrar por Status</label>
-                    <select id="filter-status" class="w-full bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all">
+                    <label for="filter-status" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Filtrar por Status</label>
+                    <select id="filter-status" class="w-full bg-gray-700 border border-gray-600 text-gray-200 text-sm rounded-lg p-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
                         <option value="all">Todos os Status</option>
                         <option value="atrasado">Em Atraso</option>
                         <option value="no-prazo">No Prazo</option>
                     </select>
                 </div>
                 <div class="flex items-end">
-                    <button id="btn-reset" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold rounded-lg p-2.5 flex items-center justify-center gap-2 border border-slate-200 transition-all">
+                    <button id="btn-reset" class="w-full bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm font-semibold rounded-lg p-2.5 flex items-center justify-center gap-2 border border-gray-600 transition-all">
                         <i data-lucide="refresh-cw" class="w-4 h-4"></i>
                         Limpar Filtros
                     </button>
@@ -110,60 +114,62 @@
             </div>
         </section>
 
+        <!-- KPIs -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 shadow-sm flex justify-between items-center">
                 <div>
-                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider block">Total de Entregas</span>
-                    <span id="kpi-total-deliveries" class="text-3xl font-bold text-slate-900 mt-1 block">0</span>
-                    <span class="text-xs text-slate-500 mt-1 block">Volume total analisado</span>
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Total de Entregas</span>
+                    <span id="kpi-total-deliveries" class="text-3xl font-bold text-gray-100 mt-1 block">0</span>
+                    <span class="text-xs text-gray-500 mt-1 block">Volume total analisado</span>
                 </div>
-                <div class="bg-blue-50 text-blue-600 p-3 rounded-lg">
+                <div class="bg-blue-900/30 text-blue-400 p-3 rounded-lg">
                     <i data-lucide="package" class="w-6 h-6"></i>
                 </div>
             </div>
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 shadow-sm flex justify-between items-center">
                 <div>
-                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider block">Entregas Atrasadas</span>
-                    <span id="kpi-late-deliveries" class="text-3xl font-bold text-rose-600 mt-1 block">0</span>
-                    <span class="text-xs text-rose-500 font-semibold mt-1 flex items-center gap-1">
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Entregas Atrasadas</span>
+                    <span id="kpi-late-deliveries" class="text-3xl font-bold text-rose-400 mt-1 block">0</span>
+                    <span class="text-xs text-rose-400 font-semibold mt-1 flex items-center gap-1">
                         <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
                         Mais que o prazo acordado
                     </span>
                 </div>
-                <div class="bg-rose-50 text-rose-600 p-3 rounded-lg">
+                <div class="bg-rose-900/30 text-rose-400 p-3 rounded-lg">
                     <i data-lucide="clock-alert" class="w-6 h-6"></i>
                 </div>
             </div>
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 shadow-sm flex justify-between items-center">
                 <div>
-                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider block">Taxa de Atraso</span>
-                    <span id="kpi-delay-rate" class="text-3xl font-bold text-amber-600 mt-1 block">0%</span>
-                    <span class="text-xs text-slate-500 mt-1 block">Média geral da operação</span>
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Taxa de Atraso</span>
+                    <span id="kpi-delay-rate" class="text-3xl font-bold text-amber-400 mt-1 block">0%</span>
+                    <span class="text-xs text-gray-500 mt-1 block">Média geral da operação</span>
                 </div>
-                <div class="bg-amber-50 text-amber-600 p-3 rounded-lg">
+                <div class="bg-amber-900/30 text-amber-400 p-3 rounded-lg">
                     <i data-lucide="percent" class="w-6 h-6"></i>
                 </div>
             </div>
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 shadow-sm flex justify-between items-center">
                 <div>
-                    <span class="text-xs font-medium text-slate-400 uppercase tracking-wider block">Desvio de Dias</span>
-                    <span id="kpi-avg-delay" class="text-3xl font-bold text-indigo-900 mt-1 block">0 d</span>
-                    <span class="text-xs text-slate-500 mt-1 block">Atraso médio das ocorrências críticas</span>
+                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Desvio de Dias</span>
+                    <span id="kpi-avg-delay" class="text-3xl font-bold text-purple-300 mt-1 block">0 d</span>
+                    <span class="text-xs text-gray-500 mt-1 block">Atraso médio das ocorrências críticas</span>
                 </div>
-                <div class="bg-indigo-50 text-indigo-600 p-3 rounded-lg">
+                <div class="bg-purple-900/30 text-purple-400 p-3 rounded-lg">
                     <i data-lucide="calendar" class="w-6 h-6"></i>
                 </div>
             </div>
         </section>
 
+        <!-- Gráficos -->
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-gray-800 p-4 sm:p-6 rounded-xl border border-gray-700 shadow-sm flex flex-col justify-between">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <h3 class="font-bold text-slate-900 text-lg">Desempenho das Transportadoras</h3>
-                        <p class="text-xs text-slate-500">Comparativo de entregas pontuais vs. atrasadas</p>
+                        <h3 class="font-bold text-gray-100 text-lg">Desempenho das Transportadoras</h3>
+                        <p class="text-xs text-gray-400">Comparativo de entregas pontuais vs. atrasadas</p>
                     </div>
-                    <div class="p-1.5 bg-slate-50 text-slate-400 rounded-md">
+                    <div class="p-1.5 bg-gray-700 text-gray-400 rounded-md">
                         <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
                     </div>
                 </div>
@@ -172,13 +178,13 @@
                 </div>
             </div>
             
-            <div class="bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-gray-800 p-4 sm:p-6 rounded-xl border border-gray-700 shadow-sm flex flex-col justify-between">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <h3 class="font-bold text-slate-900 text-lg">Distribuição Regional</h3>
-                        <p class="text-xs text-slate-500">Total de atrasos por macrorregião geográfica</p>
+                        <h3 class="font-bold text-gray-100 text-lg">Distribuição Regional</h3>
+                        <p class="text-xs text-gray-400">Total de atrasos por macrorregião geográfica</p>
                     </div>
-                    <div class="p-1.5 bg-slate-50 text-slate-400 rounded-md">
+                    <div class="p-1.5 bg-gray-700 text-gray-400 rounded-md">
                         <i data-lucide="pie-chart" class="w-4 h-4"></i>
                     </div>
                 </div>
@@ -188,56 +194,60 @@
             </div>
         </section>
 
+        <!-- Prioridades + Tabela -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm lg:col-span-1 flex flex-col">
+            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 shadow-sm lg:col-span-1 flex flex-col">
                 <div class="mb-4">
                     <div class="flex items-center gap-2">
-                        <span class="p-1 bg-red-100 text-red-600 rounded">
+                        <span class="p-1 bg-red-900/50 text-red-400 rounded">
                             <i data-lucide="zap" class="w-4 h-4"></i>
                         </span>
-                        <h3 class="font-bold text-slate-900 text-base">Prioridades Críticas</h3>
+                        <h3 class="font-bold text-gray-100 text-base">Prioridades Críticas</h3>
                     </div>
-                    <p class="text-xs text-slate-500 mt-1">Entregas atrasadas com o maior desvio absoluto em dias</p>
+                    <p class="text-xs text-gray-400 mt-1">Entregas atrasadas com o maior desvio absoluto em dias</p>
                 </div>
                 <div id="priority-list" class="space-y-3 overflow-y-auto max-h-[350px] scrollbar-thin pr-1 flex-grow">
-                    </div>
+                    <!-- Preenchido via JS -->
+                </div>
             </div>
 
-            <div class="bg-white rounded-xl border border-slate-200 shadow-sm lg:col-span-2 flex flex-col">
-                <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <div class="bg-gray-800 rounded-xl border border-gray-700 shadow-sm lg:col-span-2 flex flex-col">
+                <div class="p-5 border-b border-gray-700 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                     <div>
-                        <h3 class="font-bold text-slate-900 text-base">Registros de Entregas</h3>
-                        <p class="text-xs text-slate-500">Visão tabular consolidada com destaques automatizados</p>
+                        <h3 class="font-bold text-gray-100 text-base">Registros de Entregas</h3>
+                        <p class="text-xs text-gray-400">Visão tabular consolidada com destaques automatizados</p>
                     </div>
-                    <span id="table-counter" class="text-xs bg-slate-100 text-slate-700 font-semibold px-3 py-1.5 rounded-lg">
+                    <span id="table-counter" class="text-xs bg-gray-700 text-gray-300 font-semibold px-3 py-1.5 rounded-lg">
                         Exibindo 0 de 0 registros
                     </span>
                 </div>
                 <div class="overflow-x-auto scrollbar-thin flex-grow">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-slate-50 border-b border-slate-100">
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">ID Entrega</th>
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Transportadora</th>
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Região</th>
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Prazo Contratado</th>
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Dias Reais</th>
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Desvio (Dias)</th>
-                                <th class="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Status</th>
+                            <tr class="bg-gray-750 border-b border-gray-700">
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider">ID Entrega</th>
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider">Transportadora</th>
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider">Região</th>
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider text-center">Prazo Contratado</th>
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider text-center">Dias Reais</th>
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider text-center">Desvio (Dias)</th>
+                                <th class="p-4 text-xs font-semibold text-gray-400 uppercase tracking-wider text-right">Status</th>
                             </tr>
                         </thead>
-                        <tbody id="table-body" class="divide-y divide-slate-100">
-                            </tbody>
+                        <tbody id="table-body" class="divide-y divide-gray-700">
+                            <!-- Preenchido via JS -->
+                        </tbody>
                     </table>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 mt-auto py-6 border-t border-slate-800 text-center text-xs">
+    <!-- RODAPÉ ROXO -->
+    <footer class="bg-purple-950 text-purple-300 mt-auto py-6 border-t border-purple-800 text-center text-xs">
         <div class="max-w-7xl mx-auto px-4 space-y-2">
             <p>&copy; 2026 LogiTrack S.A. Todos os direitos reservados.</p>
-            <p class="text-slate-500">Desenvolvido como solução inteligente de monitoramento estratégico de SLA.</p>
+            <p class="text-purple-400/60">Desenvolvido como solução inteligente de monitoramento estratégico de SLA.</p>
         </div>
     </footer>
 
@@ -313,11 +323,27 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'bottom' }
+                        legend: { 
+                            position: 'bottom',
+                            labels: {
+                                color: '#d1d5db'
+                            }
+                        }
                     },
                     scales: {
-                        x: { stacked: true, grid: { display: false } },
-                        y: { stacked: true, ticks: { precision: 0 } }
+                        x: { 
+                            stacked: true, 
+                            grid: { display: false },
+                            ticks: { color: '#9ca3af' }
+                        },
+                        y: { 
+                            stacked: true, 
+                            ticks: { 
+                                precision: 0,
+                                color: '#9ca3af'
+                            },
+                            grid: { color: '#374151' }
+                        }
                     }
                 }
             });
@@ -338,14 +364,19 @@
                             '#a78bfa'  // Violet
                         ],
                         borderWidth: 2,
-                        borderColor: '#ffffff'
+                        borderColor: '#1f2937'
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'right' }
+                        legend: { 
+                            position: 'right',
+                            labels: {
+                                color: '#d1d5db'
+                            }
+                        }
                     }
                 }
             });
@@ -385,37 +416,37 @@
 
             // Aplicar dinâmica visual nas cores do indicador de Taxa de Atraso
             if (delayRate > 50) {
-                kpiRate.className = "text-3xl font-bold text-rose-600 mt-1 block";
+                kpiRate.className = "text-3xl font-bold text-rose-400 mt-1 block";
             } else if (delayRate > 20) {
-                kpiRate.className = "text-3xl font-bold text-amber-500 mt-1 block";
+                kpiRate.className = "text-3xl font-bold text-amber-400 mt-1 block";
             } else {
-                kpiRate.className = "text-3xl font-bold text-emerald-500 mt-1 block";
+                kpiRate.className = "text-3xl font-bold text-emerald-400 mt-1 block";
             }
 
             // 2. Atualizar Tabela
             tableBody.innerHTML = '';
             filtered.forEach(item => {
                 const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-50 transition-colors";
+                tr.className = "hover:bg-gray-750 transition-colors";
 
                 const isAtrasado = item.status === 'Atrasado';
                 const statusBadge = isAtrasado
-                    ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-50 text-rose-700 border border-rose-100">
-                         <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>Atrasado
+                    ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-900/30 text-rose-400 border border-rose-800">
+                         <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>Atrasado
                        </span>`
-                    : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
+                    : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-900/30 text-emerald-400 border border-emerald-800">
                          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>No Prazo
                        </span>`;
 
-                const desvioClass = item.desvio > 0 ? 'text-rose-600 font-bold' : 'text-slate-400 font-medium';
+                const desvioClass = item.desvio > 0 ? 'text-rose-400 font-bold' : 'text-gray-400 font-medium';
                 const desvioText = item.desvio > 0 ? `+${item.desvio}d` : `${item.desvio}d`;
 
                 tr.innerHTML = `
-                    <td class="p-4 text-sm font-semibold text-slate-700">#${item.id_entrega}</td>
-                    <td class="p-4 text-sm text-slate-600 font-medium">${item.transportadora}</td>
-                    <td class="p-4 text-sm text-slate-500">${item.regiao}</td>
-                    <td class="p-4 text-sm text-slate-600 text-center font-medium">${item.prazo_dias} dias</td>
-                    <td class="p-4 text-sm text-slate-600 text-center font-medium">${item.dias_reais} dias</td>
+                    <td class="p-4 text-sm font-semibold text-gray-300">#${item.id_entrega}</td>
+                    <td class="p-4 text-sm text-gray-300 font-medium">${item.transportadora}</td>
+                    <td class="p-4 text-sm text-gray-400">${item.regiao}</td>
+                    <td class="p-4 text-sm text-gray-300 text-center font-medium">${item.prazo_dias} dias</td>
+                    <td class="p-4 text-sm text-gray-300 text-center font-medium">${item.dias_reais} dias</td>
                     <td class="p-4 text-sm text-center ${desvioClass}">${desvioText}</td>
                     <td class="p-4 text-right">${statusBadge}</td>
                 `;
@@ -432,21 +463,21 @@
 
             if (criticalQueue.length === 0) {
                 priorityList.innerHTML = `
-                    <div class="text-center py-8 text-slate-400">
-                        <i data-lucide="check-circle-2" class="w-8 h-8 mx-auto mb-2 text-emerald-500"></i>
+                    <div class="text-center py-8 text-gray-400">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 mx-auto mb-2 text-emerald-400"></i>
                         <p class="text-sm">Nenhum desvio crítico detectado para os filtros selecionados.</p>
                     </div>
                 `;
             } else {
                 criticalQueue.forEach((item, index) => {
-                    let levelClass = "bg-rose-50 text-rose-700 border-rose-200";
+                    let levelClass = "bg-rose-900/20 text-rose-300 border-rose-800";
                     let rankBadge = "bg-rose-600 text-white";
 
                     if (index === 0) {
-                        levelClass = "bg-red-50 text-red-800 border-red-200 animate-pulse";
+                        levelClass = "bg-red-900/30 text-red-300 border-red-800 animate-pulse";
                         rankBadge = "bg-red-700 text-white";
                     } else if (index > 2) {
-                        levelClass = "bg-amber-50 text-amber-800 border-amber-200";
+                        levelClass = "bg-amber-900/20 text-amber-300 border-amber-800";
                         rankBadge = "bg-amber-600 text-white";
                     }
 
@@ -543,4 +574,4 @@
         });
     </script>
 </body>
-  </html>
+</html>
