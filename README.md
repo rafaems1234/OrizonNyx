@@ -1,12 +1,10 @@
-## OrizonNyx - Dashboard de Análise de Atrasos Logísticos 
+## Rota Brasil - Dashboard de Análise de Atrasos Logísticos 
 
 # 📋 Sobre o Projeto
 
-O OrizonNyx é um dashboard desenvolvido para analisar e monitorar atrasos em entregas logísticas, permitindo a visualização de indicadores de desempenho por transportadora e região.
+O Rota Brasil é um dashboard desenvolvido para analisar e monitorar atrasos em entregas logísticas, permitindo a visualização de indicadores de desempenho por transportadora e região.
 
 O objetivo do projeto é fornecer uma visão clara dos gargalos operacionais, auxiliando gestores na tomada de decisão e na melhoria dos processos logísticos.
-
-
 
 
 # 🚀 Funcionalidades
@@ -60,16 +58,14 @@ Os dados foram agrupados por transportadora e região geográfica para geração
 
 Projeto desenvolvido pelo Squad OrizonNyx.
 
-
+Nome:
+Ygor Garcia, Rafael Mendes, Davi Augusto, e Gustavo Martins
 
 
 # 🌐 Acesso ao Projeto
 
 Link da aplicação:
-
-(Adicionar URL do GitHub Pages após a publicação)
-
-
+https://rafaems1234.github.io/OrizonNyx/
 
 
 # 📁 Estrutura do Projeto
@@ -84,6 +80,4 @@ OrizonNyx/
 
 # 📌 Objetivo Acadêmico
 
-Projeto desenvolvido como atividade prática para aplicação de conceitos de análise de dados, visualização de informações e desenvolvimento web. :::
-
-(Adicionar URL do GitHub Pages após a publicação)
+Projeto desenvolvido pelo squad OrizonNyx como atividade prática para aplicação de conceitos de análise de dados, visualização de informações e desenvolvimento web. :::
