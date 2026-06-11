@@ -7,6 +7,8 @@ O OrizonNyx é um dashboard desenvolvido para analisar e monitorar atrasos em en
 O objetivo do projeto é fornecer uma visão clara dos gargalos operacionais, auxiliando gestores na tomada de decisão e na melhoria dos processos logísticos.
 
 
+
+
 🚀 Funcionalidades
 
 Visualização de indicadores de desempenho.
@@ -22,6 +24,9 @@ Filtros para navegação dos dados.
 Dashboard responsivo e intuitivo.
 
 
+
+
+
 🛠️ Tecnologias Utilizadas
 
 HTML5
@@ -31,6 +36,9 @@ CSS3
 JavaScript
 
 GitHub Pages
+
+
+
 
 
 📊 Metodologia
@@ -46,9 +54,13 @@ Valores negativos foram ajustados para zero, garantindo que apenas atrasos efeti
 Os dados foram agrupados por transportadora e região geográfica para geração de indicadores, rankings e gráficos.
 
 
+
+
 👥 Equipe
 
 Projeto desenvolvido pelo Squad OrizonNyx.
+
+
 
 
 🌐 Acesso ao Projeto
@@ -58,18 +70,20 @@ Link da aplicação:
 (Adicionar URL do GitHub Pages após a publicação)
 
 
+
+
 📁 Estrutura do Projeto
 
 OrizonNyx/
 │
 ├── index.html
-├── README.md 
+└── README.md
+
+
 
 
 📌 Objetivo Acadêmico
 
 Projeto desenvolvido como atividade prática para aplicação de conceitos de análise de dados, visualização de informações e desenvolvimento web. :::
 
-
 (Adicionar URL do GitHub Pages após a publicação)
-
